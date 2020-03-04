@@ -1,0 +1,10 @@
+{
+	"wsUri": "",
+	"dappStateContractAddress": "0x3172ba1D00E02FAEd6B512D2f880C093f81D904F",
+	"dappContractAddress": "0xf4406Fe58aC3b9E23e66865Bf338f894953724FC",
+	"ipfs": {
+		"host": "ipfs.infura.io",
+		"protocol": "https",
+		"port": 5001
+	}
+}

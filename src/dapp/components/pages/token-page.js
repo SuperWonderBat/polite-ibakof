@@ -26,21 +26,21 @@ export default class TokenPage extends CustomElement {
 `
             <action-card 
                 id="card-totalSupply"
-                title="Total Supply" description="Get total supply of tokens"
+                title="Общее количество" description="Посмотреть общее количество"
                 action="totalSupply" method="${CustomElement.METHOD_GET}" fields="" return="unitResult">
             </action-card>
 
-            <action-card 
-                title="Balance" description="Get token balance for current account"
+            <!--<action-card 
+                title="Баланс" description="Просмотр текущего баланса счета"
                 action="balance" method="${CustomElement.METHOD_GET}" fields="" return="unitResult">
-            </action-card>
+            </action-card>-->
 
             <action-card 
-                title="Balance for Account" description="Get token balance for any account"
+                title="Узнать баланс другого кошелька" description="Просмотр баланса другого кошелька"
                 action="balanceOf" method="${CustomElement.METHOD_GET}" fields="account" return="unitResult">
 
                     <account-widget 
-                        field="account" label="Account" placeholder="Account address">
+                        field="account" label="Аккаунт" placeholder="Адрес аккаунта">
                     </account-widget>
 
             </action-card>
@@ -50,15 +50,15 @@ export default class TokenPage extends CustomElement {
             uiHtml[CustomElement.UI_WRITE] =
 `
             <action-card
-                title="Transfer" description="Transfer tokens to another account"
+                title="Перевод" description="Трансфер токенов на другой кошелек"
                 action="transfer" method="${CustomElement.METHOD_POST}" fields="to amount">
 
                     <account-widget
-                        field="to" label="To" placeholder="Recipient's account address">
+                        field="to" label="Кому" placeholder="Адрес получателя">
                     </account-widget>
 
                     <number-widget
-                        field="amount" label="Amount" placeholder="Number of tokens to transfer">
+                        field="amount" label="Количество" placeholder="Количество токенов для отправки">
                     </number-widget>
                 
             </action-card>

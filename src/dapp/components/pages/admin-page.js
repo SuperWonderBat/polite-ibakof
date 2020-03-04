@@ -22,7 +22,7 @@ export default class AdminPage extends CustomElement {
 
         let content = 
 `
-        <page-widget title="${self.title}" category="" description="Contract administrative features">
+        <page-widget title="${self.title}" category="" description="Страница для администрирования (в разработке)">
             ${uiHtml[CustomElement.UI_ADMIN]}
         </page-widget>
         <panel-widget id="resultPanel"></panel-widget>

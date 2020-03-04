@@ -14,11 +14,11 @@ export default class PageNavigation extends CustomElement {
     getPages() {
         let staticPages = [{
             name: 'home',
-            title: 'Home',
+            title: 'Главная',
             route: '/'
         }, {
             name: 'dapp',
-            title: 'My Dapp',
+            title: 'Aurum Coin',
             route: '/dapp'
         }, {
             name: 'admin',
@@ -26,7 +26,9 @@ export default class PageNavigation extends CustomElement {
             route: '/admin',
             hidden: true
         }]
-        return staticPages.concat([{"name":"token","title":"Custom Token","description":"Create a token for tracking value associated with your dapp.","category":"Asset and Value Tracking","route":"/token"},{"name":"ipfs","title":"IPFS Documents","description":"InterPlanetary File System (decentralized file storage)","category":"File Storage","route":"/ipfs"}]); 
+        return staticPages.concat([{"name":"token","title":"Управление токенами","description":" ","category":"Отслеживание активов и стоимости","route":"/token"},
+            //{"name":"ipfs","title":"IPFS Documents","description":"InterPlanetary File System (decentralized file storage)","category":"File Storage","route":"/ipfs"}
+            ]);
     }
 
     navigate(name) {
@@ -98,12 +100,12 @@ export default class PageNavigation extends CustomElement {
             },
             [
                 DOM.a({
-                        href: 'https://www.trycrypto.com/dappstarter?utm_source=dapp',
+                        href: '/',
                         className: 'logo-wrapper waves-effect'
                     },
                     [
                         DOM.img({
-                            alt: 'DappStarter Logo',
+                            alt: 'Aurum Coin Logo',
                             className: 'img-fluid',
                             src: logo
                         })
@@ -122,7 +124,7 @@ export default class PageNavigation extends CustomElement {
                 DOM.h4({
                     className: 'mt-5 mb-2'
                 }, 
-                "Feature Blocks"),
+                "Навигация"),
                 DOM.ul({
                     id: self.listId + '-blocks',
                     className: 'list-group list-group-flush'
@@ -131,18 +133,6 @@ export default class PageNavigation extends CustomElement {
                 ),
                 // END: Feature Blocks
 
-
-                DOM.a({
-                    href: 'https://www.trycrypto.com/dappstarter?utm_source=dapp',
-                    target: '_new'
-                },
-                [
-                    DOM.img({
-                        src: 'https://dappstarter.trycrypto.com/trycrypto-logo-1024.png?r=ds',
-                        className: 'text-center fixed-bottom mb-3',
-                        style: 'margin-left:55px;max-width:160px;'
-                    })
-                ])
             ]
         );
         let handle = DOM.div({

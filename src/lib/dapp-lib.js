@@ -52,7 +52,7 @@ export default class DappLib {
         let supply = result.callData;
         return {
             type: DappLib.DAPP_RESULT_BIG_NUMBER,
-            label: 'Total Supply',
+            label: 'Общее количество',
             result: new BN(supply),
             unitResult: await DappLib._fromSmallestUnit(supply, data),
             hint: null
@@ -73,7 +73,7 @@ export default class DappLib {
         let balance = result.callData;
         return {
             type: DappLib.DAPP_RESULT_BIG_NUMBER,
-            label: 'Account Balance for ' + DappLib.formatAccount(result.callAccount),
+            label: 'Баланс аккаунта ' + DappLib.formatAccount(result.callAccount),
             result: new BN(balance),
             unitResult: await DappLib._fromSmallestUnit(balance, data),
             hint: null
@@ -95,7 +95,7 @@ export default class DappLib {
         let balance = result.callData;
         return {
             type: DappLib.DAPP_RESULT_BIG_NUMBER,
-            label: DappLib.formatAccount(result.callAccount) + ' Account Balance',
+            label: DappLib.formatAccount(result.callAccount) + ' Баланс аккаунта',
             result: new BN(balance),
             unitResult: await DappLib._fromSmallestUnit(balance, data),
             hint: null
@@ -120,20 +120,20 @@ export default class DappLib {
         );
         return {
             type: DappLib.DAPP_RESULT_TX_HASH,
-            label: 'Transaction Hash',
+            label: 'Хэш транзакции',
             result: DappLib.getTransactionHash(result.callData),
-            hint: `Verify transfer by using "Balance for Account" to check the balance of ${DappLib.formatAccount(data.to)}.`
+            hint: `Подтвердите перевод, используя «Баланс счета», чтобы проверить баланс ${DappLib.formatAccount(data.to)}.`
         }
     }
 
     static async onApproval(callback) {
         let params = {};
-        DappLib.addEventHandler(DappLib.DAPP_STATE_CONTRACT_WS, 'Approval', params, callback);
+        DappLib.addEventHandler(DappLib.DAPP_STATE_CONTRACT_WS, 'Подтверждение', params, callback);
     }
 
     static async onTransfer(callback) {
         let params = {};
-        DappLib.addEventHandler(DappLib.DAPP_STATE_CONTRACT_WS, 'Transfer', params, callback);
+        DappLib.addEventHandler(DappLib.DAPP_STATE_CONTRACT_WS, 'Трансфер', params, callback);
     }
 
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> FILE STORAGE: IPFS  <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
@@ -339,7 +339,7 @@ export default class DappLib {
         let owner = result.callData;
         return {
             type: DappLib.DAPP_RESULT_ACCOUNT,
-            label: 'Contract Owner',
+            label: 'Ваш кошелек',
             result: owner,
             unitResult: null,
             hint: null

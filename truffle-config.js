@@ -9,14 +9,13 @@ const {
 } = require('@harmony-js/core');
 
 let mnemonic = 'urge clog right example dish drill card maximum mix bachelor section select';
-let devUri = 'https://api.s0.b.hmny.io/';
+let uri = 'https://api.s0.b.hmny.io/';
 
 module.exports = {
 
     networks: {
         development: {
-            uri: devUri,
-            network_id: '2',
+            network_id: '1',
             provider: () => {
                 const truffleProvider = new TruffleProvider(
                     uri, {

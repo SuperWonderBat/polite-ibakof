@@ -25,12 +25,12 @@ export default class TopNavigation extends CustomElement {
         let content = `
 <nav class="navbar-light scrolling-navbar navbar navbar-expand-md flexible-navbar" role="navigation">
     <a class="navbar-brand active">
-        <strong>DappStarter</strong>
+        <strong>Aurum Coin</strong>
     </a>
     <button type="button" class="navbar-toggler">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="navbar-collapse collapse" style="">
+    <!--<div class="navbar-collapse collapse" style="">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
                 <a rel="noopener noreferrer" class="nav-link Ripple-parent" href="https://www.trycrypto.com/dappstarter" target="_blank">About</a>
@@ -51,9 +51,9 @@ export default class TopNavigation extends CustomElement {
             </li>
             <!--li class="nav-item">
                 <a class="btn peach-gradient nav-link Ripple-parent" rel="noopener noreferrer" href="https://demo.photoblock.org/" target="_blank">Sign in with PhotoBlock</a>
-            </li-->
+            </li
         </ul>
-    </div>
+    </div>-->
 </nav>
 `
         self.innerHTML = content;
